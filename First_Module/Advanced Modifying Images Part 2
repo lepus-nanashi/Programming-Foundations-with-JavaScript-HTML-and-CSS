@@ -1,0 +1,27 @@
+var img= new SimpleImage(200, 200);
+
+for (var pixel of img.values()) {
+    var x= pixel.getX();
+    var y = pixel.getY();
+    if (y < 100) {
+        pixel.setRed(255);
+        pixel.setGreen(0);
+        pixel.setBlue(0);
+    }
+    if (x >=100) {
+        pixel.setRed(0);
+        pixel.setGreen(255);
+        pixel.setBlue(0);
+    }
+    if (y >= 100) {
+        pixel.setRed(255);
+        pixel.setGreen(0);
+        pixel.setBlue(255);
+    }
+    if (x >= 100 && y>=100) {
+        pixel.setRed(0);
+        pixel.setGreen(0);
+        pixel.setBlue(255);
+    }
+}
+print (img)
