@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <script type="text/javascript">
+      function doColor() {
+        var can = document.getElementById('canvas1');
+        var colorInput = document.getElementById('colorpick');
+        var color= colorInput.value;
+        can.style.background=color;
+      }
+      function doSquare() {
+        var can= document.getElementById('canvas1');
+        var range= document.getElementById('range');
+        var size= range.value;
+        var ctx = can.getContext("2d");
+        ctx.clearRect(0,0, can.width, can.height);
+        ctx.fillStyle="white";
+        ctx.fillRect(20,20, size,size);
+      }
+    </script>
+  </head>
+  <body>
+    <div>
+      <canvas id="canvas1" width="400" height="400"></canvas>
+    </div>
+    <div>
+      <input type="color" value= #6A94E2 id="colorpick" onchange= "doColor()">
+      <input type="range" min="10" max="100" id="range" value="10" oninput="doSquare()">
+    </div>
+  </body>
+</html>
