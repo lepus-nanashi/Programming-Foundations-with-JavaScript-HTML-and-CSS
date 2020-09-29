@@ -1,0 +1,12 @@
+
+var dev= new SimpleImage('duke_blue_devil.png');
+var w= dev.getWidth();
+
+for (var pixel of dev.values()){
+    if  (pixel.getRed() !==255){
+        pixel.setRed(255);
+        pixel.setGreen(255);
+        pixel.setBlue(0);
+    }
+}
+print (dev)
