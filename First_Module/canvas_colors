@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Changing canvas</title>
+    <script type="text/javascript">
+      function doChange(){
+        var blueCan = document.getElementById('canvas1');
+        var yellowCan = document.getElementById('canvas2');
+        blueCan.style.background = "blue";
+        yellowCan.style.background = "yellow";
+      }
+      function doRed() {
+        var redCan = document.getElementById('canvas1');
+        redCan.style.background = "red";
+      }
+      function doOrange() {
+        var orangeCan = document.getElementById('canvas2');
+        orangeCan.style.background = "orange";
+      }
+    </script>
+  </head>
+  <body>
+    <div>
+      <canvas id="canvas1" width="500" height="500"></canvas>
+      <canvas id="canvas2" width="500" height="500"></canvas>
+    </div>
+    <div>
+      <input type = "button" id = "firstButton" value = "Change colors" onclick = "doChange()">
+    </div>
+    <div>
+      <input type = "button" id = "redButton" value = "Change to red" onclick = "doRed()">
+      <input type = "button" id = "orangeButton" value = "Change to orange" onclick = "doOrange()">
+    </div>
+  </body>
+</html>
