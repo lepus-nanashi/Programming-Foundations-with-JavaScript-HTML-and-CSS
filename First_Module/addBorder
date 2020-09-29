@@ -1,0 +1,27 @@
+var img= new SimpleImage('smallpanda.png');
+var wb= img.getWidth();
+var hb= img.getHeight();
+var output= new SimpleImage(wb, hb)
+
+function setBlack (x){
+    var pix= x;
+    pix.setGreen(0);
+    pix.setRed(0);
+    pix.setBlue(0);
+}
+
+for (var pixel of img.values()) {
+    if (pixel.getX() < 10) {
+        setBlack(pixel);
+    }
+    if (pixel.getX() > (wb-10)) {
+        setBlack(pixel);
+    }
+    if (pixel.getY() < 10) {
+        setBlack(pixel);
+    }
+    if (pixel.getY() > (hb-10)) {
+        setBlack(pixel);
+    }
+}
+print (img)
